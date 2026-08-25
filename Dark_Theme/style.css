@@ -1,0 +1,67 @@
+:root {
+  --page-bg: #f8f9fa;
+  --page-text: #212529;
+  --track-bg: #e9ecef;
+  --knob-bg: #ffd166;
+}
+
+body.night-theme {
+  --page-bg: #121212;
+  --page-text: #e0e0e0;
+  --track-bg: #343a40;
+  --knob-bg: #4ea8de;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--page-bg);
+  color: var(--page-text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.mode-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#theme-switch-input {
+  display: none;
+}
+
+.slider-track {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 44px;
+  background-color: var(--track-bg);
+  border-radius: 44px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.slider-knob {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 36px;
+  height: 36px;
+  background-color: var(--knob-bg);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  transition: transform 0.4s ease-out, background-color 0.3s ease;
+}
+
+#theme-switch-input:checked + .slider-track .slider-knob {
+  transform: translateX(46px);
+}

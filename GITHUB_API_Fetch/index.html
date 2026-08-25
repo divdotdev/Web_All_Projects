@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub API Fetch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-box">
+        <h1>GitHub API Fetch</h1>
+        
+        <div class="search-area">
+            <input type="text" id="usernameInput" placeholder="Enter GitHub ID here...">
+            <button id="fetchBtn">Search</button>
+        </div>
+
+        <p id="loadingText" style="display: none;">Loading...</p>
+        <p id="errorText" style="display: none; color: red;">User Not Found!</p>
+
+        <div id="userData" style="display: none;">
+            <img id="profilePic" src="" alt="Profile Picture" width="120">
+            
+            <h2 id="fullName">Name</h2>
+            <p><strong>Bio:</strong> <span id="userBio"></span></p>
+            <p><strong>Repos:</strong> <span id="repoCount"></span></p>
+            <p><strong>Followers:</strong> <span id="followerCount"></span></p>
+            
+            <a id="profileLink" href="#" target="_blank">Click here to visit profile</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
